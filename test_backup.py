@@ -9,7 +9,7 @@ def test_get_user_home():
 def test_get_backup_filename():
     filename = get_backup_filename()
     assert filename.startswith("backup_")
-    assert len(filename) > 10  # Vérifie que la date est incluse
+    assert len(filename) > 10
 
 def test_create_backup():
     result = create_backup()
