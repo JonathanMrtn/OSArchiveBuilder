@@ -5,8 +5,8 @@ from datetime import datetime
 import tempfile
 
 def get_user_home():
-    return os.getcwd()
-    # return os.path.expanduser("~")
+    return os.getcwd() # use to make fast test to pass and build a smal backup file
+    # return os.path.expanduser("~") # use this to official test to pass and build a big (contain all files from the user on your OS) backup file
 
 def get_backup_filename():
     date_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
