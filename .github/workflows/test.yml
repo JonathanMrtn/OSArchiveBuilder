@@ -26,15 +26,15 @@ jobs:
       - name: Run tests
         run: pytest
 
-      - name: Send email notification
+      - name: Send email
         if: always()
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.example.com
+          server_address: smtp.gmail.com
           server_port: 587
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
           subject: GitHub Actions Test Result
-          body: Tests have been run. Check the logs for details.
-          to: cedric.surquin@gmail.com
+          body: Tests have been run successfully.
+          to: jonathan.martin42800@gmail.com
           from: GitHub Actions
