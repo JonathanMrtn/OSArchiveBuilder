@@ -5,7 +5,8 @@ from datetime import datetime
 import tempfile
 
 def get_user_home():
-    return os.path.expanduser("~")
+    return os.getcwd()
+    # return os.path.expanduser("~")
 
 def get_backup_filename():
     date_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
